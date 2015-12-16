@@ -14,6 +14,10 @@
     <string name="right">Right</string>
     <string name="grabopen">Grab Open</string>
     <string name="grabclose">Grab Close</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="circle">Circle</string>
 
     <style name="subtitle">
         <item name="android:textSize">15sp</item>

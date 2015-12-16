@@ -8,18 +8,23 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_gravity="center_horizontal">
-        <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/elbow"
-                android:id="@+id/rbElbow" android:layout_marginLeft="50dp" android:layout_gravity="center_horizontal"
-                android:checked="true"/>
-        <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wrist"
-                android:id="@+id/rbWrist" android:layout_marginLeft="50dp"
-                android:layout_gravity="center_horizontal"/>
+
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal" android:id="@+id/rgJoints">
+            <RadioButton
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/elbow"
+                    android:id="@+id/rbElbow"
+                    android:checked="true" android:layout_weight="1"/>
+            <RadioButton
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wrist"
+                    android:id="@+id/rbWrist"
+                    android:layout_weight="1"/>
+        </RadioGroup>
     </LinearLayout>
     <RelativeLayout
             android:layout_width="match_parent"

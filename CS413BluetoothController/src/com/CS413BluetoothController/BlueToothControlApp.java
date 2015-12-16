@@ -1,10 +1,9 @@
 package com.CS413BluetoothController;
 
-import android.app.Activity;
+
 import android.app.Application;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
@@ -12,6 +11,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
+
+/**
+ * Created by GavinDonnelly on 15/11/2015.
+ *
+ * Built from the developer.google.com sample code and other code on the
+ * internet on a using bluetooth so this is just kinda hashed and mashed togther
+ * works, there are bits I dont know why but they need to be there lots of comments
+ *
+ */
 
 public class BlueToothControlApp extends Application {
 

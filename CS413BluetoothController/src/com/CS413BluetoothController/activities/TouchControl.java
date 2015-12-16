@@ -2,6 +2,7 @@ package com.CS413BluetoothController.activities;
 
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 
 import android.widget.Button;
@@ -20,7 +21,7 @@ public class TouchControl extends BluetoothActivity {
 
     private Button btUp, btDown, btLeft, btRight, btGrabOpen, btGrabClose;
     private RadioButton rbElbow, rbWrist;
-    private String msg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,132 +32,117 @@ public class TouchControl extends BluetoothActivity {
         rbWrist = (RadioButton) findViewById(R.id.rbWrist);
 
         btUp = (Button) findViewById(R.id.btUp);
-        btUp.setOnClickListener(new Button.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                moveUp();
-            }
-        });
+        btUp.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String msg;
+                        if(rbElbow.isChecked())
+                        {
+
+                            msg = "EUX";
+
+                        }
+                        else {
+                            msg = "WUX";
+
+                        }
+                        sendCommand(msg);
+                    }
+                }));
 
         btDown = (Button) findViewById(R.id.btDown);
-        btDown.setOnClickListener(new Button.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                moveDown();
+        btDown.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg;
+                if(rbElbow.isChecked())
+                {
+
+                    msg = "EDX";
+
+                }
+                else {
+                    msg = "WDX";
+
+                }
+                sendCommand(msg);
             }
-        });
+        }));
 
         btLeft = (Button) findViewById(R.id.btLeft);
-        btLeft.setOnClickListener(new Button.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                moveLeft();
+        btLeft.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg;
+                if(rbElbow.isChecked())
+                {
+
+                    msg = "ELX";
+
+                }
+                else {
+                    msg = "WLX";
+
+                }
+                sendCommand(msg);
             }
-        });
+        }));
 
         btRight = (Button) findViewById(R.id.btRight);
-        btRight.setOnClickListener(new Button.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                moveRight();
+        btRight.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg;
+                if(rbElbow.isChecked())
+                {
+
+                    msg = "ERX";
+
+                }
+                else {
+                    msg = "WRX";
+
+                }
+                sendCommand(msg);
             }
-        });
+        }));
 
         btGrabOpen = (Button) findViewById(R.id.btGrabOpen);
-        btGrabOpen.setOnClickListener(new Button.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                openGrab();
+        btGrabOpen.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg;
+
+                    msg = "GOX";
+
+                sendCommand(msg);
             }
-        });
+        }));
 
         btGrabClose = (Button) findViewById(R.id.btGrabClose);
-        btGrabClose.setOnClickListener(new Button.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                closeGrab();
+        btGrabClose.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String msg;
+
+                msg = "GCX";
+
+                sendCommand(msg);
             }
-        });
+        }));
     }
 
-    public void moveLeft() {
-
-        if(rbElbow.isChecked())
+    public void sendCommand(String liveMsg){
         {
-            msg = "ELX";
-            write(msg);
+
+                //Log.d("Test touch commands", liveMsg);
+                write(liveMsg);
 
         }
-        else{
-            msg = "WLX";
-            write(msg);
-        }
-
     }
 
-    public void moveRight() {
 
-        if(rbElbow.isChecked())
-        {
-            msg = "ERX";
-            write(msg);
 
-        }
-        else{
-            msg = "WRX";
-            write(msg);
-        }
 
-    }
-
-    public void moveUp() {
-
-        if(rbElbow.isChecked())
-        {
-            msg = "EUX";
-            write(msg);
-
-        }
-        else{
-            msg = "WUX";
-            write(msg);
-        }
-
-    }
-
-    public void moveDown() {
-
-        if(rbElbow.isChecked())
-        {
-            msg = "EDX";
-            write(msg);
-
-        }
-        else{
-            msg = "WDX";
-            write(msg);
-        }
-
-    }
-
-    public void closeGrab() {
-
-            msg = "GCX";
-            write(msg);
-
-    }
-
-    public void openGrab() {
-
-            msg = "GOX";
-            write(msg);
-
-    }
 
 }
