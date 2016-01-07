@@ -135,6 +135,7 @@ public class BlueToothControlApp extends Application {
         private final BluetoothSocket socket;
         private InputStream inStream;
         private OutputStream outStream;
+        private BluetoothDevice CurrentBTDevice;
 
         public BluetoothThread(BluetoothDevice device)
         {
@@ -142,13 +143,15 @@ public class BlueToothControlApp extends Application {
             try
             {
                 // General purpose UUID
-                tmp = device.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+                tmp = device.createInsecureRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
             }
             catch(IOException e)
             {
                 e.printStackTrace();
             }
+            catch (Exception e) {Log.e("","Error creating socket");}
             socket = tmp;
+            CurrentBTDevice = device;
         }
 
         public void run()
@@ -163,12 +166,20 @@ public class BlueToothControlApp extends Application {
             }
             catch(IOException e)
             {
+                Log.e("",e.getMessage());
                 // If the user didn't cancel the connection then it has failed (timeout)
                 if(!stoppingConnection)
                 {
                     if(D)
                         Log.e(TAG, "Cound not connect to socket");
                     e.printStackTrace();
+                   // try {
+                        //try failback method
+                     //   socket =(BluetoothSocket) CurrentBTDevice.getClass().getMethod("createRfcommSocket", new Class[] {int.class}).invoke(CurrentBTDevice,1);
+                       // socket.connect();
+                        //break;
+                   // }
+                    //catch ()
                     try
                     {
                         socket.close();

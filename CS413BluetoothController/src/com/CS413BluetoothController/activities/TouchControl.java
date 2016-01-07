@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
+import android.view.*;
+import android.view.View.OnTouchListener;
 
 import android.widget.Button;
 
@@ -32,26 +34,51 @@ public class TouchControl extends BluetoothActivity {
         rbWrist = (RadioButton) findViewById(R.id.rbWrist);
 
         btUp = (Button) findViewById(R.id.btUp);
-        btUp.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String msg;
-                        if(rbElbow.isChecked())
-                        {
-
-                            msg = "EUX";
-
-                        }
-                        else {
-                            msg = "WUX";
-
-                        }
-                        sendCommand(msg);
+        btUp.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                String msg;
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if(rbElbow.isChecked()) {
+                        msg = "EU";
                     }
-                }));
+                    else {
+                        msg = "WU";
+                    }
+                    sendCommand(msg);
+                    return true;
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    msg = "C";
+                    sendCommand(msg);
+                    return true;
+                }
+                return false;
+            }
+        });
 
         btDown = (Button) findViewById(R.id.btDown);
-        btDown.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+        btDown.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                String msg;
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if(rbElbow.isChecked()) {
+                        msg = "ED";
+                    }
+                    else {
+                        msg = "WD";
+                    }
+                    sendCommand(msg);
+                    return true;
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    msg = "C";
+                    sendCommand(msg);
+                    return true;
+                }
+                return false;
+            }
+        });
+        /*btDown.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String msg;
@@ -67,29 +94,55 @@ public class TouchControl extends BluetoothActivity {
                 }
                 sendCommand(msg);
             }
-        }));
+        }));*/
 
         btLeft = (Button) findViewById(R.id.btLeft);
-        btLeft.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+        /*btLeft.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String msg;
-                if(rbElbow.isChecked())
-                {
 
-                    msg = "ELX";
+                    msg = "L";
 
-                }
-                else {
-                    msg = "WLX";
 
-                }
                 sendCommand(msg);
             }
-        }));
+        }));*/
+        btLeft.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                String msg;
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    msg = "L";
+                    sendCommand(msg);
+                    return true;
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    msg = "C";
+                    sendCommand(msg);
+                    return true;
+                }
+                return false;
+            }
+        });
 
         btRight = (Button) findViewById(R.id.btRight);
-        btRight.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+        btRight.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                String msg;
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    msg = "R";
+                    sendCommand(msg);
+                    return true;
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    msg = "C";
+                    sendCommand(msg);
+                    return true;
+                }
+                return false;
+            }
+        });
+        /*btRight.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String msg;
@@ -105,7 +158,7 @@ public class TouchControl extends BluetoothActivity {
                 }
                 sendCommand(msg);
             }
-        }));
+        }));*/
 
         btGrabOpen = (Button) findViewById(R.id.btGrabOpen);
         btGrabOpen.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
@@ -135,7 +188,7 @@ public class TouchControl extends BluetoothActivity {
     public void sendCommand(String liveMsg){
         {
 
-                //Log.d("Test touch commands", liveMsg);
+                Log.d("Test touch commands", liveMsg);
                 write(liveMsg);
 
         }

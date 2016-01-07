@@ -1,8 +1,4 @@
 package com.CS413BluetoothController;
-import android.bluetooth.BluetoothDevice;
-import android.os.ParcelUuid;
-
-import java.util.ArrayList;
 
 /**
  * Created by GavinDonnelly on 15/11/2015.
@@ -16,10 +12,6 @@ public class BTDevice {
     private String name = "";
     private String address = "";
     private String signal = "";
-    private int bondState = BluetoothDevice.BOND_NONE;
-    private ArrayList<ParcelUuid> uuids = null;
-    private final int deviceClass;
-    private final int majorDeviceClass;
 
     public BTDevice(String name, String address, Short signal)
     {

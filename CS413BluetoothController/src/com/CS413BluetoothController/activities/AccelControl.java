@@ -144,7 +144,7 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
 
                 }
                 write(msg);
-                //Log.d("Test touch commands", msg);
+                Log.d("Test touch commands", msg);
             } else if (lastX > 1.5) {
                 String msg;
                 if (rbElbow.isChecked()) {
@@ -156,7 +156,7 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
 
                 }
                 write(msg);
-                //Log.d("Test touch commands", msg);
+                Log.d("Test touch commands", msg);
             } else if (lastY < -1.5) {
                 String msg;
                 if (rbElbow.isChecked()) {
@@ -168,7 +168,7 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
 
                 }
                 write(msg);
-                //Log.d("Test touch commands", msg);
+                Log.d("Test touch commands", msg);
             } else if (lastY > 1.5) {
                 String msg;
                 if (rbElbow.isChecked()) {
@@ -180,7 +180,7 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
 
                 }
                 write(msg);
-                //Log.d("Test touch commands", msg);
+                Log.d("Test touch commands", msg);
             } else {
                 return;
             }
