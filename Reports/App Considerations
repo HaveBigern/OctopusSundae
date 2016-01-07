@@ -1,0 +1,11 @@
+Android App
+For the control on the mobile phone side we will build an android app, there are a couple of options for building this app. 
+We need to choose software option that can give us the capability for the user interface we need and can also send and 
+receive the Bluetooth signals effectively. This gives us a couple of options.
+
+1.	Googles android studio, this is the core android app development studio, this will give us all the options
+we need in terms of user interface and Bluetooth connection and will be a mix of java and c mainly, 
+so could be our best option in terms of languages we are experience with.
+2.	Python, there is the option to write python scripts, but we are unsure how stable these will be with a Bluetooth 
+connection or how much flexibility we will have with GUI.
+3.	Web page, we could run a local web app on the phone, this would be affective but not as stable as the other two solutions.

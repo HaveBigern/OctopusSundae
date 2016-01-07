@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CS413BluetoothController</string>
+    <string name="commandHint">Enter a command</string>
+    <string name="pairedDevices">Paired devices</string>
+    <string name="availableDevices">Available devices</string>
+    <string name="search">Search for devices</string>
+    <string name="searching">Searching&#8230;</string>
+    <string name="elbow">Elbow</string>
+    <string name="wrist">Wrist</string>
+    <string name="up">Up</string>
+    <string name="down">Down</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="grabopen">Grab Open</string>
+    <string name="grabclose">Grab Close</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="circle">Circle</string>
+
+    <style name="subtitle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#888888</item>
+    </style>
+
+    <style name="listItem">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+</resources>
