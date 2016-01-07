@@ -27,12 +27,13 @@ public class BlueToothControlApp extends Application {
 
     private final static String TAG = "BluetoothController";
     // Debug flag
-    public final static boolean D = false;
+    public final static boolean D = true;
 
     // Time between sending the idle filler to confirm communication, must be smaller than the timeout constant.
     private final int minCommInterval = 900;
     // Time after which the communication is deemed dead
-    private final int timeout = 3000;
+    private final int timeout = 5000;
+    //was 3000
     private long lastComm;
 
     // Member fields
@@ -101,6 +102,7 @@ public class BlueToothControlApp extends Application {
 
     public synchronized void connect(BluetoothDevice device)
     {
+
         if(D)
             Log.i(TAG, "Connecting to " + device.getName());
         stoppingConnection = false;
@@ -140,7 +142,7 @@ public class BlueToothControlApp extends Application {
             try
             {
                 // General purpose UUID
-                tmp = device.createInsecureRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+                tmp = device.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
             }
             catch(IOException e)
             {
@@ -177,8 +179,10 @@ public class BlueToothControlApp extends Application {
                             Log.e(TAG, "Cound not close the socket");
                         e1.printStackTrace();
                     }
+                    Log.e(TAG,"disconnecting in run");
                     disconnect();
                 }
+                Log.e(TAG,"blast:" + e);
                 return;
             }
 
@@ -186,7 +190,7 @@ public class BlueToothControlApp extends Application {
             setState(STATE_CONNECTED);
             // Send message to activity to inform of success
             sendMessage(MSG_CONNECTED, null);
-
+            Log.e(TAG,"just connected");
             // Get the BluetoothSocket input and output streams
             try
             {
@@ -196,6 +200,7 @@ public class BlueToothControlApp extends Application {
             catch(IOException e)
             {
                 // Failed to get the streams
+                Log.e(TAG,"failed to get stream disconnecting");
                 disconnect();
                 e.printStackTrace();
                 return;
@@ -205,12 +210,13 @@ public class BlueToothControlApp extends Application {
             byte ch;
             int bytes;
             String input;
-
+            Log.e(TAG,"listen outer");
             // Keep listening to the InputStream while connected
             while(true)
             {
                 try
                 {
+                    Log.e(TAG,"listening loop");
                     // Make a packet, use \n (new line or NL) as packet end
                     // println() used in Arduino code adds \r\n to the end of the stream
                     bytes = 0;
@@ -236,6 +242,7 @@ public class BlueToothControlApp extends Application {
                     }
                     busy = false;
                     // Update last communication time to prevent timeout
+                    Log.e(TAG,"updating comm");
                     updateLastComm();
 
                 }
@@ -247,8 +254,10 @@ public class BlueToothControlApp extends Application {
                         if(D)
                             Log.e(TAG, "Failed to read");
                         e.printStackTrace();
+                        Log.e(TAG,"fail to read, disconnecting");
                         disconnect();
                     }
+                    Log.e(TAG,"blast2: " + e);
                     break;
                 }
             }
@@ -324,6 +333,7 @@ public class BlueToothControlApp extends Application {
 
         public void run()
         {
+            Log.i(TAG, "State: " + state);
             while(state == STATE_CONNECTING || state == STATE_CONNECTED)
             {
                 // I'm not sure that it's needed here, but it works
@@ -335,11 +345,14 @@ public class BlueToothControlApp extends Application {
                         write(null);
                     }
 
+                    Log.i(TAG, "State: " + state);
+                    Log.i(TAG, "lastComm: " + lastComm);
                     // Communication timed out
                     if(System.currentTimeMillis() - lastComm > timeout)
                     {
                         if(D)
                             Log.e(TAG, "Timeout");
+                        Log.e(TAG,"timeout disconnect");
                         disconnect();
                         break;
                     }
@@ -391,6 +404,7 @@ public class BlueToothControlApp extends Application {
      */
     public synchronized void disconnect()
     {
+
         // Do not stop twice
         if(!stoppingConnection)
         {
