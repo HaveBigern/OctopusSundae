@@ -38,7 +38,7 @@ public class BlueToothControlApp extends Application {
 
     // Member fields
     private BluetoothThread bluetoothThread;
-    private TimeoutThread timeoutThread;
+    //private TimeoutThread timeoutThread;
     private Handler activityHandler;
     private int state;
     private boolean busy, stoppingConnection;
@@ -108,6 +108,14 @@ public class BlueToothControlApp extends Application {
         stoppingConnection = false;
         busy = false;
 
+        // Cancel any thread attempting to make a connection
+        if (state == STATE_CONNECTING) {
+            if (bluetoothThread != null) {
+                bluetoothThread.cancel();
+                bluetoothThread = null;
+            }
+        }
+
         // Cancel any thread currently running a connection
         if(bluetoothThread != null)
         {
@@ -120,10 +128,11 @@ public class BlueToothControlApp extends Application {
         // Start the thread to connect with the given device
         bluetoothThread = new BluetoothThread(device);
         bluetoothThread.start();
+        setState(STATE_CONNECTING);
 
         // Start the timeout thread to check the connecting status
-        timeoutThread = new TimeoutThread();
-        timeoutThread.start();
+        //timeoutThread = new TimeoutThread();
+        //timeoutThread.start();
     }
 
     /**
@@ -132,7 +141,7 @@ public class BlueToothControlApp extends Application {
      */
     private class BluetoothThread extends Thread
     {
-        private final BluetoothSocket socket;
+        private BluetoothSocket socket;
         private InputStream inStream;
         private OutputStream outStream;
         private BluetoothDevice CurrentBTDevice;
@@ -173,22 +182,26 @@ public class BlueToothControlApp extends Application {
                     if(D)
                         Log.e(TAG, "Cound not connect to socket");
                     e.printStackTrace();
-                   // try {
+                   try {
                         //try failback method
-                     //   socket =(BluetoothSocket) CurrentBTDevice.getClass().getMethod("createRfcommSocket", new Class[] {int.class}).invoke(CurrentBTDevice,1);
-                       // socket.connect();
-                        //break;
-                   // }
+                       Log.e(TAG, "Trying failback");
+                        socket =(BluetoothSocket) CurrentBTDevice.getClass().getMethod("createRfcommSocket", new Class[] {int.class}).invoke(CurrentBTDevice,1);
+                        socket.connect();
+                       Log.e(TAG,"Connected");
+                   }
+                   catch (Exception e1) {
+                       Log.e("", "Couldn't establish Bluetooth connection!");
+                   }
                     //catch ()
                     try
                     {
                         socket.close();
                     }
-                    catch(IOException e1)
+                    catch(IOException e2)
                     {
                         if(D)
                             Log.e(TAG, "Cound not close the socket");
-                        e1.printStackTrace();
+                        e2.printStackTrace();
                     }
                     Log.e(TAG,"disconnecting in run");
                     disconnect();
@@ -332,7 +345,7 @@ public class BlueToothControlApp extends Application {
     }
 
 
-    private class TimeoutThread extends Thread
+    /*private class TimeoutThread extends Thread
     {
         public TimeoutThread()
         {
@@ -380,7 +393,7 @@ public class BlueToothControlApp extends Application {
                 }
             }
         }
-    }
+    }*/
 
 
     public boolean write(String out)
