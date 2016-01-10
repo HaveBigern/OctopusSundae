@@ -9,18 +9,13 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01c56e74-3123-4ba5-b115-99e6ef01a561" name="Default" comment="Testing github on windows">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp$TimeoutThread.class" afterPath="" />
+    <list default="true" id="01c56e74-3123-4ba5-b115-99e6ef01a561" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.apk" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.unaligned.apk" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp$BluetoothThread.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp$BluetoothThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/AccelControl.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/AccelControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/CS413BluetoothController/BlueToothControlApp.java" afterPath="$PROJECT_DIR$/src/com/CS413BluetoothController/BlueToothControlApp.java" />
     </list>
     <ignored path="CS413BluetoothController.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -915,12 +910,19 @@
       <workItem from="1452099586672" duration="4660000" />
       <workItem from="1452170080446" duration="8366000" />
       <workItem from="1452178926023" duration="1000" />
-      <workItem from="1452459545241" duration="2876000" />
+      <workItem from="1452459545241" duration="2954000" />
     </task>
+    <task id="LOCAL-00001" summary="Trying to make bluetooth work, removing timeout protocols should work will test in lab tomorow">
+      <created>1452462632944</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1452462632944</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41404000" />
+    <option name="totallyTimeSpent" value="41482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1643" height="1027" extended-state="6" />
@@ -968,7 +970,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Testing github on windows" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing github on windows" />
+    <MESSAGE value="Trying to make bluetooth work, removing timeout protocols should work will test in lab tomorow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to make bluetooth work, removing timeout protocols should work will test in lab tomorow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
