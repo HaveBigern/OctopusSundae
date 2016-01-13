@@ -7,7 +7,7 @@ The idea for this project was to develop a robot arm with an arduino board. This
 
 ## Group Website
 
-Group website which hold lots of information about the project can be found [HERE!](cs413robotarm.wordpress.com)
+Group website which hold lots of information about the project can be found [HERE!](https://cs413robotarm.wordpress.com)
 
 ## Group Members
 
