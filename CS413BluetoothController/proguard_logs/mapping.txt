@@ -1,0 +1,211 @@
+com.CS413BluetoothController.Action -> com.CS413BluetoothController.a:
+    java.lang.String action -> a
+    java.lang.String descripiton -> b
+    java.lang.String className -> c
+    java.lang.String getAction() -> a
+    java.lang.String getDescripiton() -> b
+    java.lang.String getClassName() -> c
+com.CS413BluetoothController.ActionListActivity -> com.CS413BluetoothController.ActionListActivity:
+    java.util.ArrayList activityList -> b
+    android.widget.ListView lvActionList -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean handleMessage(android.os.Message) -> handleMessage
+    void onBackPressed() -> onBackPressed
+    java.util.ArrayList access$000(com.CS413BluetoothController.ActionListActivity) -> a
+com.CS413BluetoothController.ActionListActivity$1 -> com.CS413BluetoothController.b:
+    com.CS413BluetoothController.ActionListActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.CS413BluetoothController.ActionListBaseAdapter -> com.CS413BluetoothController.c:
+    java.util.ArrayList actionArrayList -> a
+    android.view.LayoutInflater mInflater -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.CS413BluetoothController.ActionListBaseAdapter$ViewHolder -> com.CS413BluetoothController.d:
+    android.widget.TextView tvAction -> a
+    android.widget.TextView tvDescription -> b
+com.CS413BluetoothController.BTDevice -> com.CS413BluetoothController.e:
+    java.lang.String name -> a
+    java.lang.String address -> b
+    java.lang.String signal -> c
+    java.lang.String getName() -> a
+    java.lang.String getAddress() -> b
+    java.lang.String getSignal() -> c
+com.CS413BluetoothController.BTDeviceListBaseAdapter -> com.CS413BluetoothController.f:
+    java.util.ArrayList deviceArrayList -> a
+    android.view.LayoutInflater mInflater -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.CS413BluetoothController.BTDeviceListBaseAdapter$ViewHolder -> com.CS413BluetoothController.g:
+    android.widget.TextView tvName -> a
+    android.widget.TextView tvAddress -> b
+    android.widget.TextView tvSignal -> c
+com.CS413BluetoothController.BTDeviceSelectActivity -> com.CS413BluetoothController.BTDeviceSelectActivity:
+    java.util.ArrayList btdevAvailableList -> b
+    java.util.ArrayList btdevPairedList -> c
+    com.CS413BluetoothController.BTDeviceListBaseAdapter btdevAvailableListAdapter -> d
+    com.CS413BluetoothController.BTDeviceListBaseAdapter btdevPairedListAdapter -> e
+    android.widget.ListView btdevAvailableLV -> f
+    android.widget.ListView btdevPairedV -> g
+    android.app.ProgressDialog connectionProgressDialog -> h
+    android.widget.Button bFindDevices -> i
+    android.bluetooth.BluetoothAdapter bluetoothAdapter -> j
+    com.CS413BluetoothController.BlueToothControlApp appState -> k
+    android.widget.AdapterView$OnItemClickListener deviceClickListener -> a
+    android.content.BroadcastReceiver Receiver -> l
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean handleMessage(android.os.Message) -> handleMessage
+    void startDiscovery() -> a
+    boolean checkBlueToothState() -> b
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onDestroy() -> onDestroy
+    void onResume() -> onResume
+    void onPause() -> onPause
+    android.bluetooth.BluetoothAdapter access$000(com.CS413BluetoothController.BTDeviceSelectActivity) -> a
+    android.app.ProgressDialog access$102(com.CS413BluetoothController.BTDeviceSelectActivity,android.app.ProgressDialog) -> a
+    android.app.ProgressDialog access$100(com.CS413BluetoothController.BTDeviceSelectActivity) -> b
+    com.CS413BluetoothController.BlueToothControlApp access$200(com.CS413BluetoothController.BTDeviceSelectActivity) -> c
+    java.util.ArrayList access$300(com.CS413BluetoothController.BTDeviceSelectActivity) -> d
+    com.CS413BluetoothController.BTDeviceListBaseAdapter access$400(com.CS413BluetoothController.BTDeviceSelectActivity) -> e
+    android.widget.Button access$500(com.CS413BluetoothController.BTDeviceSelectActivity) -> f
+com.CS413BluetoothController.BTDeviceSelectActivity$1 -> com.CS413BluetoothController.h:
+    com.CS413BluetoothController.BTDeviceSelectActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.CS413BluetoothController.BTDeviceSelectActivity$2 -> com.CS413BluetoothController.i:
+    com.CS413BluetoothController.BTDeviceSelectActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.CS413BluetoothController.BTDeviceSelectActivity$2$1 -> com.CS413BluetoothController.j:
+    com.CS413BluetoothController.BTDeviceSelectActivity$2 this$1 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.CS413BluetoothController.BTDeviceSelectActivity$3 -> com.CS413BluetoothController.k:
+    com.CS413BluetoothController.BTDeviceSelectActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.CS413BluetoothController.BlueToothControlApp -> com.CS413BluetoothController.BlueToothControlApp:
+    int minCommInterval -> a
+    int timeout -> b
+    long lastComm -> c
+    com.CS413BluetoothController.BlueToothControlApp$BluetoothThread bluetoothThread -> d
+    android.os.Handler activityHandler -> e
+    int state -> f
+    boolean busy -> g
+    boolean stoppingConnection -> h
+    void setActivityHandler(android.os.Handler) -> a
+    void sendMessage(int,java.lang.Object) -> a
+    void setState(int) -> a
+    void updateLastComm() -> b
+    void connect(android.bluetooth.BluetoothDevice) -> a
+    boolean write(java.lang.String) -> a
+    void disconnect() -> a
+    boolean access$000(com.CS413BluetoothController.BlueToothControlApp) -> a
+    void access$100(com.CS413BluetoothController.BlueToothControlApp,int) -> a
+    void access$200(com.CS413BluetoothController.BlueToothControlApp,int,java.lang.Object) -> a
+    boolean access$302(com.CS413BluetoothController.BlueToothControlApp,boolean) -> a
+    void access$400(com.CS413BluetoothController.BlueToothControlApp) -> b
+com.CS413BluetoothController.BlueToothControlApp$BluetoothThread -> com.CS413BluetoothController.l:
+    android.bluetooth.BluetoothSocket socket -> b
+    java.io.InputStream inStream -> c
+    java.io.OutputStream outStream -> d
+    android.bluetooth.BluetoothDevice CurrentBTDevice -> e
+    com.CS413BluetoothController.BlueToothControlApp this$0 -> a
+    void run() -> run
+    boolean write(java.lang.String) -> a
+    void cancel() -> a
+com.CS413BluetoothController.BluetoothActivity -> com.CS413BluetoothController.m:
+    com.CS413BluetoothController.BlueToothControlApp appState -> b
+    boolean preventCancel -> a
+    java.lang.String TAG -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean write(java.lang.String) -> a
+    void disconnect() -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onResume() -> onResume
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onBackPressed() -> onBackPressed
+    void finish() -> finish
+    void onPause() -> onPause
+com.CS413BluetoothController.activities.AccelControl -> com.CS413BluetoothController.activities.AccelControl:
+    com.CS413BluetoothController.activities.AccelView svAccelerometer -> b
+    android.hardware.SensorManager sensorManager -> c
+    android.hardware.Sensor accelerometer -> d
+    boolean enabled -> e
+    android.widget.TextView tvX -> f
+    android.widget.TextView tvY -> g
+    float lastX -> h
+    float lastY -> i
+    float accJitterMargin -> j
+    android.widget.RadioButton rbElbow -> k
+    android.widget.RadioButton rbShoulder -> l
+    java.lang.String lastMsg -> m
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    boolean access$002(com.CS413BluetoothController.activities.AccelControl,boolean) -> a
+    boolean access$000(com.CS413BluetoothController.activities.AccelControl) -> a
+    boolean access$100(com.CS413BluetoothController.activities.AccelControl,java.lang.String) -> a
+com.CS413BluetoothController.activities.AccelControl$1 -> com.CS413BluetoothController.activities.a:
+    android.widget.Button val$btStart -> a
+    com.CS413BluetoothController.activities.AccelControl this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.CS413BluetoothController.activities.AccelView -> com.CS413BluetoothController.activities.AccelView:
+    java.lang.Thread thread -> a
+    android.view.SurfaceHolder surfaceHolder -> b
+    boolean running -> c
+    android.graphics.PointF speedVector -> d
+    float mag -> e
+    android.graphics.Paint paint -> f
+    void setVector(float,float) -> a
+    void onResumeMySurfaceView() -> a
+    void onPauseMySurfaceView() -> b
+    void run() -> run
+com.CS413BluetoothController.activities.LogView -> com.CS413BluetoothController.activities.LogView:
+    java.lang.String data -> a
+    void init() -> a
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+com.CS413BluetoothController.activities.SendData -> com.CS413BluetoothController.activities.SendData:
+    com.CS413BluetoothController.activities.LogView tvData -> b
+    android.widget.EditText etCommand -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean handleMessage(android.os.Message) -> handleMessage
+    android.widget.EditText access$000(com.CS413BluetoothController.activities.SendData) -> a
+    boolean access$100(com.CS413BluetoothController.activities.SendData,java.lang.String) -> a
+com.CS413BluetoothController.activities.SendData$1 -> com.CS413BluetoothController.activities.b:
+    com.CS413BluetoothController.activities.SendData this$0 -> a
+    boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent) -> onEditorAction
+com.CS413BluetoothController.activities.TouchControl -> com.CS413BluetoothController.activities.TouchControl:
+    android.widget.Button btUp -> b
+    android.widget.Button btDown -> c
+    android.widget.Button btLeft -> d
+    android.widget.Button btRight -> e
+    android.widget.Button btGrabOpen -> f
+    android.widget.Button btGrabClose -> g
+    android.widget.RadioButton rbElbow -> h
+    android.widget.RadioButton rbShoulder -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    void sendCommand(java.lang.String) -> b
+    android.widget.RadioButton access$000(com.CS413BluetoothController.activities.TouchControl) -> a
+com.CS413BluetoothController.activities.TouchControl$1 -> com.CS413BluetoothController.activities.c:
+    com.CS413BluetoothController.activities.TouchControl this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.CS413BluetoothController.activities.TouchControl$2 -> com.CS413BluetoothController.activities.d:
+    com.CS413BluetoothController.activities.TouchControl this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.CS413BluetoothController.activities.TouchControl$3 -> com.CS413BluetoothController.activities.e:
+    com.CS413BluetoothController.activities.TouchControl this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.CS413BluetoothController.activities.TouchControl$4 -> com.CS413BluetoothController.activities.f:
+    com.CS413BluetoothController.activities.TouchControl this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.CS413BluetoothController.activities.TouchControl$5 -> com.CS413BluetoothController.activities.g:
+    com.CS413BluetoothController.activities.TouchControl this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.CS413BluetoothController.activities.TouchControl$6 -> com.CS413BluetoothController.activities.h:
+    com.CS413BluetoothController.activities.TouchControl this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch

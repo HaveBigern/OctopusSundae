@@ -10,30 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01c56e74-3123-4ba5-b115-99e6ef01a561" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.apk" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.unaligned.apk" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/CS413BluetoothController.unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/ActionListActivity.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/ActionListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp$BluetoothThread.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp$BluetoothThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/BlueToothControlApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/R$id.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/R$string.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/AccelControl$1.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/AccelControl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/AccelControl.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/AccelControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$1.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$2.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$3.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$4.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$5.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$6.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl.class" afterPath="$PROJECT_DIR$/out/production/CS413BluetoothController/com/CS413BluetoothController/activities/TouchControl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/accelerometer_control.xml" afterPath="$PROJECT_DIR$/res/layout/accelerometer_control.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/touch_control.xml" afterPath="$PROJECT_DIR$/res/layout/touch_control.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/CS413BluetoothController/ActionListActivity.java" afterPath="$PROJECT_DIR$/src/com/CS413BluetoothController/ActionListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/CS413BluetoothController/BlueToothControlApp.java" afterPath="$PROJECT_DIR$/src/com/CS413BluetoothController/BlueToothControlApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/CS413BluetoothController/activities/AccelControl.java" afterPath="$PROJECT_DIR$/src/com/CS413BluetoothController/activities/AccelControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/CS413BluetoothController/activities/TouchControl.java" afterPath="$PROJECT_DIR$/src/com/CS413BluetoothController/activities/TouchControl.java" />
     </list>
     <ignored path="CS413BluetoothController.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,8 +36,8 @@
       <file leaf-file-name="AccelControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/CS413BluetoothController/activities/AccelControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41463414">
-              <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="169" column="34" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -150,7 +127,7 @@
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/Keystore.jks" />
-    <option name="KEY_ALIAS" value="release" />
+    <option name="KEY_ALIAS" value="release2" />
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
@@ -425,10 +402,11 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="ExportedModule" value="CS413BluetoothController" />
     <property name="ExportedApkPath" value="$PROJECT_DIR$/CS413BluetoothController.apk" />
-    <property name="AndroidRunProguardForReleaseBuild" value="false" />
+    <property name="AndroidRunProguardForReleaseBuild" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="AndroidProguardConfigPaths" value="$USER_HOME$/Library/Android/sdk/tools/proguard/proguard-android.txt:/Users/gavindonnelly/Documents/GitHub Repos/OctopusSundae/CS413BluetoothController/proguard-project.txt" />
   </component>
   <component name="RunManager" selected="Android Application.CS413BluetoothController">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -964,7 +942,7 @@
       <workItem from="1452522724285" duration="2310000" />
       <workItem from="1452634613242" duration="128000" />
       <workItem from="1452634878711" duration="2439000" />
-      <workItem from="1452648660271" duration="3865000" />
+      <workItem from="1452648660271" duration="4316000" />
     </task>
     <task id="LOCAL-00001" summary="Trying to make bluetooth work, removing timeout protocols should work will test in lab tomorow">
       <created>1452462632944</created>
@@ -982,7 +960,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50247000" />
+    <option name="totallyTimeSpent" value="50698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="23" width="1643" height="1027" extended-state="1" />
@@ -1001,7 +979,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.49535963" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881" sideWeight="0.49178332" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881" sideWeight="0.49178332" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20754717" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1935,8 +1913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/CS413BluetoothController/activities/AccelControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41463414">
-          <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="169" column="34" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
           <folding />
         </state>
       </provider>

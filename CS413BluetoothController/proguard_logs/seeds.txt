@@ -1,0 +1,82 @@
+com.CS413BluetoothController.ActionListActivity
+com.CS413BluetoothController.ActionListActivity: ActionListActivity()
+com.CS413BluetoothController.BTDeviceSelectActivity
+com.CS413BluetoothController.BTDeviceSelectActivity: BTDeviceSelectActivity()
+com.CS413BluetoothController.BlueToothControlApp
+com.CS413BluetoothController.BlueToothControlApp: BlueToothControlApp()
+com.CS413BluetoothController.BluetoothActivity: BluetoothActivity()
+com.CS413BluetoothController.R$drawable: int circle
+com.CS413BluetoothController.R$drawable: int ic_launcher
+com.CS413BluetoothController.R$id: int bFindDevices
+com.CS413BluetoothController.R$id: int btDown
+com.CS413BluetoothController.R$id: int btGrabClose
+com.CS413BluetoothController.R$id: int btGrabOpen
+com.CS413BluetoothController.R$id: int btLeft
+com.CS413BluetoothController.R$id: int btRight
+com.CS413BluetoothController.R$id: int btStart
+com.CS413BluetoothController.R$id: int btUp
+com.CS413BluetoothController.R$id: int etCommand
+com.CS413BluetoothController.R$id: int imageView
+com.CS413BluetoothController.R$id: int lvActionList
+com.CS413BluetoothController.R$id: int lvAvailableDevices
+com.CS413BluetoothController.R$id: int lvPairedDevices
+com.CS413BluetoothController.R$id: int rbElbow
+com.CS413BluetoothController.R$id: int rbShoulder
+com.CS413BluetoothController.R$id: int rgJoints
+com.CS413BluetoothController.R$id: int svLine
+com.CS413BluetoothController.R$id: int tvAcce
+com.CS413BluetoothController.R$id: int tvAction
+com.CS413BluetoothController.R$id: int tvAddress
+com.CS413BluetoothController.R$id: int tvAvailableDevices
+com.CS413BluetoothController.R$id: int tvDesc
+com.CS413BluetoothController.R$id: int tvLeft
+com.CS413BluetoothController.R$id: int tvLogData
+com.CS413BluetoothController.R$id: int tvName
+com.CS413BluetoothController.R$id: int tvPairedDevices
+com.CS413BluetoothController.R$id: int tvRight
+com.CS413BluetoothController.R$id: int tvSignal
+com.CS413BluetoothController.R$id: int tvX
+com.CS413BluetoothController.R$id: int tvY
+com.CS413BluetoothController.R$layout: int accelerometer_control
+com.CS413BluetoothController.R$layout: int action_list
+com.CS413BluetoothController.R$layout: int action_row_view
+com.CS413BluetoothController.R$layout: int btdevice_list
+com.CS413BluetoothController.R$layout: int btdevice_row_view
+com.CS413BluetoothController.R$layout: int send_text_data
+com.CS413BluetoothController.R$layout: int settings
+com.CS413BluetoothController.R$layout: int touch_control
+com.CS413BluetoothController.R$string: int accelerometer
+com.CS413BluetoothController.R$string: int app_name
+com.CS413BluetoothController.R$string: int availableDevices
+com.CS413BluetoothController.R$string: int circle
+com.CS413BluetoothController.R$string: int commandHint
+com.CS413BluetoothController.R$string: int down
+com.CS413BluetoothController.R$string: int elbow
+com.CS413BluetoothController.R$string: int grabclose
+com.CS413BluetoothController.R$string: int grabopen
+com.CS413BluetoothController.R$string: int left
+com.CS413BluetoothController.R$string: int pairedDevices
+com.CS413BluetoothController.R$string: int right
+com.CS413BluetoothController.R$string: int search
+com.CS413BluetoothController.R$string: int searching
+com.CS413BluetoothController.R$string: int shoulder
+com.CS413BluetoothController.R$string: int start
+com.CS413BluetoothController.R$string: int stop
+com.CS413BluetoothController.R$string: int up
+com.CS413BluetoothController.R$style: int listItem
+com.CS413BluetoothController.R$style: int subtitle
+com.CS413BluetoothController.R$style: int title
+com.CS413BluetoothController.activities.AccelControl
+com.CS413BluetoothController.activities.AccelControl: AccelControl()
+com.CS413BluetoothController.activities.AccelView
+com.CS413BluetoothController.activities.AccelView: AccelView(android.content.Context)
+com.CS413BluetoothController.activities.AccelView: AccelView(android.content.Context,android.util.AttributeSet)
+com.CS413BluetoothController.activities.AccelView: AccelView(android.content.Context,android.util.AttributeSet,int)
+com.CS413BluetoothController.activities.LogView
+com.CS413BluetoothController.activities.LogView: LogView(android.content.Context)
+com.CS413BluetoothController.activities.LogView: LogView(android.content.Context,android.util.AttributeSet)
+com.CS413BluetoothController.activities.LogView: LogView(android.content.Context,android.util.AttributeSet,int)
+com.CS413BluetoothController.activities.SendData
+com.CS413BluetoothController.activities.SendData: SendData()
+com.CS413BluetoothController.activities.TouchControl
+com.CS413BluetoothController.activities.TouchControl: TouchControl()
