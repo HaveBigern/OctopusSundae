@@ -21,8 +21,8 @@
             <RadioButton
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:text="@string/wrist"
-                    android:id="@+id/rbWrist"
+                    android:text="@string/shoulder"
+                    android:id="@+id/rbShoulder"
                     android:layout_weight="1"/>
         </RadioGroup>
     </LinearLayout>

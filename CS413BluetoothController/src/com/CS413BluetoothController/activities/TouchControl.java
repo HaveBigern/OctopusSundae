@@ -22,7 +22,7 @@ import com.CS413BluetoothController.R;
 public class TouchControl extends BluetoothActivity {
 
     private Button btUp, btDown, btLeft, btRight, btGrabOpen, btGrabClose;
-    private RadioButton rbElbow, rbWrist;
+    private RadioButton rbElbow, rbShoulder;
 
 
     @Override
@@ -31,7 +31,7 @@ public class TouchControl extends BluetoothActivity {
         this.setContentView(R.layout.touch_control);
 
         rbElbow = (RadioButton) findViewById(R.id.rbElbow);
-        rbWrist = (RadioButton) findViewById(R.id.rbWrist);
+        rbShoulder = (RadioButton) findViewById(R.id.rbShoulder);
 
         btUp = (Button) findViewById(R.id.btUp);
         btUp.setOnTouchListener(new View.OnTouchListener() {
@@ -40,10 +40,10 @@ public class TouchControl extends BluetoothActivity {
                 String msg;
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     if(rbElbow.isChecked()) {
-                        msg = "EU";
+                        msg = "EUX";
                     }
                     else {
-                        msg = "WU";
+                        msg = "SUX";
                     }
                     sendCommand(msg);
                     return true;
@@ -63,10 +63,10 @@ public class TouchControl extends BluetoothActivity {
                 String msg;
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     if(rbElbow.isChecked()) {
-                        msg = "ED";
+                        msg = "EDX";
                     }
                     else {
-                        msg = "WD";
+                        msg = "SDX";
                     }
                     sendCommand(msg);
                     return true;
@@ -113,7 +113,7 @@ public class TouchControl extends BluetoothActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 String msg;
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                    msg = "L";
+                    msg = "LX";
                     sendCommand(msg);
                     return true;
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -131,7 +131,7 @@ public class TouchControl extends BluetoothActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 String msg;
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                    msg = "R";
+                    msg = "RX";
                     sendCommand(msg);
                     return true;
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -161,28 +161,40 @@ public class TouchControl extends BluetoothActivity {
         }));*/
 
         btGrabOpen = (Button) findViewById(R.id.btGrabOpen);
-        btGrabOpen.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+        btGrabOpen.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onTouch(View v, MotionEvent event) {
                 String msg;
-
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     msg = "GOX";
-
-                sendCommand(msg);
+                    sendCommand(msg);
+                    return true;
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    msg = "C";
+                    sendCommand(msg);
+                    return true;
+                }
+                return false;
             }
-        }));
+        });
 
         btGrabClose = (Button) findViewById(R.id.btGrabClose);
-        btGrabClose.setOnTouchListener(new RepeatListener(400, 100, new View.OnClickListener() {
+        btGrabClose.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onTouch(View v, MotionEvent event) {
                 String msg;
-
-                msg = "GCX";
-
-                sendCommand(msg);
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    msg = "GX";
+                    sendCommand(msg);
+                    return true;
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    msg = "C";
+                    sendCommand(msg);
+                    return true;
+                }
+                return false;
             }
-        }));
+        });
     }
 
     public void sendCommand(String liveMsg){

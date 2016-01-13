@@ -32,7 +32,8 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
     private boolean enabled = false;
     private TextView tvX, tvY;
     private float lastX = 0, lastY = 0, accJitterMargin = 0.1f;
-    private RadioButton rbElbow, rbWrist;
+    private RadioButton rbElbow, rbShoulder;
+    private String lastMsg = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -45,7 +46,7 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
         tvY = (TextView) findViewById(R.id.tvY);
 
         rbElbow = (RadioButton) findViewById(R.id.rbElbow);
-        rbWrist = (RadioButton) findViewById(R.id.rbWrist);
+        rbShoulder = (RadioButton) findViewById(R.id.rbShoulder);
 
         final Button btStart = (Button) findViewById(R.id.btStart);
         btStart.setOnClickListener(new View.OnClickListener()
@@ -60,7 +61,7 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
                 else
                 {
                     btStart.setText(R.string.start);
-                    write("q");
+                    write("C");
                 }
             }
         });
@@ -100,30 +101,52 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
 
     }
 
-    public void onSensorChanged(SensorEvent event)
-    {
+    public void onSensorChanged(SensorEvent event) {
         float x = event.values[0];
         float y = event.values[1];
 
         // Some accelerometer sensors can change very often for no reason
         boolean change = false;
+        boolean directionChange = false;
 
-        if(Math.abs(lastX - x) > accJitterMargin)
-        {
+
+        if (lastX < -1.5 && x < -1.5) {
+            directionChange = false;
+        }
+        else if (lastX > 1.5 && x > 1.5) {
+            directionChange = false;
+        }
+        else if (lastY < -1.5 && y < -1.5) {
+            directionChange = false;
+        }
+        else if (lastY > 1.5 && y > 1.5) {
+            directionChange = false;
+        }
+        else {directionChange = true;}
+
+        if (Math.abs(lastX - x) > accJitterMargin) {
             lastX = x;
             change = true;
         }
 
-        if(Math.abs(lastY - y) > accJitterMargin)
-        {
+        if (Math.abs(lastY - y) > accJitterMargin) {
             lastY = y;
             change = true;
+
         }
 
         // No significant enough change
-        if(!change)
-        {
+        if (!change) {
             return;
+        }
+
+        if (directionChange && enabled) {
+            if(lastMsg != "C"){
+            String msg;
+            msg = "C";
+            lastMsg = msg;
+            write(msg);
+            Log.d("Test touch commands", msg);}
         }
 
         // Show accelerator sensor values
@@ -132,59 +155,68 @@ public class AccelControl extends BluetoothActivity implements SensorEventListen
 
         svAccelerometer.setVector(lastX, lastY);
         if (enabled) {
+            if (directionChange){
 
-            if (lastX < -1.5) {
-                String msg;
-                if (rbElbow.isChecked()) {
+                if (lastX < -1.5) {
+                    String msg;
+                    if (rbElbow.isChecked()) {
 
-                    msg = "ERX";
+                        msg = "RX";
 
+                    } else {
+                        msg = "RX";
+
+                    }
+                    lastMsg = msg;
+                    write(msg);
+                    Log.d("Test touch commands", msg);
+                } else if (lastX > 1.5) {
+                    String msg;
+                    if (rbElbow.isChecked()) {
+
+                        msg = "LX";
+
+                    } else {
+                        msg = "LX";
+
+                    }
+                    lastMsg = msg;
+                    write(msg);
+                    Log.d("Test touch commands", msg);
+                } else if (lastY < -1.5) {
+                    String msg;
+                    if (rbElbow.isChecked()) {
+
+                        msg = "EUX";
+
+                    } else {
+                        msg = "SUX";
+
+                    }
+                    lastMsg = msg;
+                    write(msg);
+                    Log.d("Test touch commands", msg);
+                } else if (lastY > 1.5) {
+                    String msg;
+                    if (rbElbow.isChecked()) {
+
+                        msg = "EDX";
+
+                    } else {
+                        msg = "SDX";
+
+                    }
+                    lastMsg = msg;
+                    write(msg);
+                    Log.d("Test touch commands", msg);
                 } else {
-                    msg = "WRX";
-
+                    return;
                 }
-                write(msg);
-                Log.d("Test touch commands", msg);
-            } else if (lastX > 1.5) {
-                String msg;
-                if (rbElbow.isChecked()) {
-
-                    msg = "ELX";
-
-                } else {
-                    msg = "WLX";
-
-                }
-                write(msg);
-                Log.d("Test touch commands", msg);
-            } else if (lastY < -1.5) {
-                String msg;
-                if (rbElbow.isChecked()) {
-
-                    msg = "EUX";
-
-                } else {
-                    msg = "WUX";
-
-                }
-                write(msg);
-                Log.d("Test touch commands", msg);
-            } else if (lastY > 1.5) {
-                String msg;
-                if (rbElbow.isChecked()) {
-
-                    msg = "EDX";
-
-                } else {
-                    msg = "WDX";
-
-                }
-                write(msg);
-                Log.d("Test touch commands", msg);
-            } else {
+        }
+            else{
                 return;
             }
-        }
+    }
         else{
             return;
         }

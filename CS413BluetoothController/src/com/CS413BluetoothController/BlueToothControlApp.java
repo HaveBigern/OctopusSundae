@@ -25,7 +25,7 @@ import java.util.UUID;
 
 public class BlueToothControlApp extends Application {
 
-    private final static String TAG = "BluetoothController";
+    private final static String TAG = "BluetoothControllerApp";
     // Debug flag
     public final static boolean D = true;
 

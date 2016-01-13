@@ -64,7 +64,7 @@ public class ActionListActivity extends BluetoothActivity {
         if(msg.what == BlueToothControlApp.MSG_OK)
         {
             // When quitting an activity automatically reset the robot
-            write("q");
+            write("C");
         }
         return false;
     }
