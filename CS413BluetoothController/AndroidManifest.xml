@@ -42,5 +42,15 @@
                 android:label="Send Data"
                 android:screenOrientation="portrait" >
         </activity>
+        <activity
+                android:name=".activities.TouchControl"
+                android:label="Touch Control"
+                android:screenOrientation="portrait" >
+        </activity>
+        <activity
+                android:name=".activities.AccelControl"
+                android:label="Accel Control"
+                android:screenOrientation="portrait" >
+        </activity>
     </application>
 </manifest>

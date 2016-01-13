@@ -26,7 +26,7 @@ public class ActionListActivity extends BluetoothActivity {
 
         lvActionList = (ListView) findViewById(R.id.lvActionList);
 
-        activityList.add(new Action("Accelerometer Control", "Control your robot by tilting the phone", "AccelerometerControl"));
+        activityList.add(new Action("Accelerometer Control", "Control your robot by tilting the phone", "AccelControl"));
         activityList.add(new Action("Touch Control", "Control robot's movements by touch", "TouchControl"));
         activityList.add(new Action("Send Data", "Send custom commands to robot", "SendData"));
 
